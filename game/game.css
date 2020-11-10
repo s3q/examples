@@ -1,0 +1,183 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    padding: 0px;
+    margin: 0px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.fa-react {
+    color: #46adff;
+}
+
+.fa-html5 {
+    color: #ff0000;
+}
+
+.fa-github {
+     color: #444966;
+}
+
+.fa-python {
+    color: #ffc107;
+}
+
+.fa-vuejs {
+    color: #2aa92f;
+}
+
+.fa-angular {
+    color: #ff2020;
+}
+
+.fa-js {
+    color: #efd600;
+}
+
+.fa-css3 {
+    color: #0e94ff;
+}
+
+.fa-question {
+    color: #ff6060;
+}
+
+.fa-node-js {
+    color: #4caf50;
+}
+
+.fa-gitlab {
+    color: #e07800;
+}
+
+.info-container {
+    padding: 18px;
+    display: flex;
+    margin: 10px auto; 
+    width: 98%;
+    justify-content: space-between;
+    background-color: whitesmoke;
+    border: 2px solid #ffebeb;
+}
+
+.info-container .name {
+    color: #767786;
+} 
+
+.info-container .name span {
+    color: #787dbd;
+} 
+
+.info-container .time {
+    color: #767786;
+}
+
+.info-container .time span {
+    color: #00b400;
+}
+
+.info-container .tries {
+    color: #767786;
+} 
+
+.info-container .tries span {
+    color: #ff7676;
+} 
+
+.info-container .true {
+    color: #767786;
+} 
+
+.info-container .true span {
+    color: #769bff;
+} 
+
+.memory-game-blocks {
+    display: flex;
+    width: 95%;
+    flex-wrap: wrap;
+    margin: 20px auto;
+}
+
+.memory-game-blocks.no-clicking {
+    pointer-events: none;
+}
+
+.game-block {
+    height: 200px;
+    transform-style: preserve-3d;
+    cursor: pointer;
+    position: relative;
+    flex: 1 0 200px;
+    margin: 20px 15px;
+    transition: transform .5s ease;
+}
+
+.game-block .face {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    backface-visibility: hidden;
+    border: 2px solid #ffd1d1;
+}
+
+.game-block .front {
+    background-color: #ffe5e5;
+    line-height: 200px;
+}
+
+.game-block .back {
+    background-color: #ffecec;
+    transform: rotateY(180deg);
+}
+
+.game-block.is-flipped, .game-block.has-match {
+    transform: rotateY(180deg);
+}
+
+.dropback {
+    z-index: 100000000;
+    position: fixed;
+    top: 0px;
+    width: 100%;
+    height: 100%;
+    background-color: #00000063;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.dropback .space-evenly {
+    display: flex;
+    justify-content: space-evenly;
+    width: 100%;
+}
+
+.dropback .start { 
+    background-color: #ff3434;
+}
+
+.dropback .start, .dropback .try {
+    padding: 18px 22px;
+    color: #ffffff;
+    cursor: pointer;
+    font-size: 18px;
+    user-select: none;
+    border-radius: 5px;
+    transform: scale(1);
+    transition: transform .4s cubic-bezier(0.165, 0.84, 0.44, 1);
+}
+
+.dropback .start:hover, .dropback .try:hover { 
+    transform: scale(1.5);
+}
+
+
+.dropback .try { 
+    background-color: #33bb11;
+}
