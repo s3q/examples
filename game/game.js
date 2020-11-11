@@ -28,7 +28,7 @@ dropback_start.onclick = function () {
 }
 
 
-let duration = 1000, 
+let duration = 90000, 
     fl = [];
     blocks = document.querySelector('.memory-game-blocks');
 
