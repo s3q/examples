@@ -28,7 +28,7 @@ dropback_start.onclick = function () {
 }
 
 
-let duration = 100000, 
+let duration = 1000, 
     fl = [];
     blocks = document.querySelector('.memory-game-blocks');
 
@@ -142,7 +142,7 @@ function shuffle(array) {
 
 
 let time_ele = document.getElementById('time'),
-    seconds = 10;
+    seconds = 100;
 
 secondsPass();
 
@@ -150,7 +150,7 @@ secondsPass();
 
         secondsPass();
 
-    }, 10000);
+    }, 1000);
 
 function secondsPass() {
     
