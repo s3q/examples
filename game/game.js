@@ -142,7 +142,7 @@ function shuffle(array) {
 
 
 let time_ele = document.getElementById('time'),
-    seconds = 100;
+    seconds = 1000;
 
 secondsPass();
 
