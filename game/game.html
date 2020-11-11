@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>memory game</title>
+    <link rel="stylesheet" href="co.min.css">
     <link rel="stylesheet" href="game.css">
     <link rel="stylesheet" href="fontawesome-free-5.14.0-web/fontawesome-free-5.14.0-web/css/all.css">
 </head>
@@ -14,6 +15,11 @@
         <div class="space-evenly">
             <span class="start">start game</span>
             <span class="try" style="display: none;">try agin</span>
+            <div id="won-div" class="bgc-blue p-20 text-center" style="font-size: 25px; display: none;">
+                <div>time : <span id="dead-time" class='color-light'></span></div>
+                <div class="mt-20">true <span id="answers-true" class='color-light'>0</span></div>
+                <div class="mt-20">wrong tries <span id="answers-false" class='color-light'>0</span></div>
+            </div>
         </div>
     </div>
 
@@ -22,7 +28,7 @@
             Hello : <span id="name"></span>
         </div>
         <div class="time">
-            time <span id="time"></span>
+            time : <span id="time"></span>
         </div>
         <div class="true">
             true <span id="true">0</span>

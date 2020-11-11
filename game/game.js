@@ -6,7 +6,13 @@ let dropback = document.querySelector('.dropback'),
     dropback_try = document.querySelector('.dropback .try'), 
     print_your_name = document.getElementById('name'),
     true_element = document.querySelector('.true span'),
-    tries_element = document.querySelector('.tries span');
+    tries_element = document.querySelector('.tries span'),
+
+    // won :
+    wonDiv = document.getElementById('won-div'),
+    deadTime = document.getElementById('dead-time'),
+    answersTrue = document.getElementById('answers-true'),
+    answersFalse = document.getElementById('answers-false');
 
 dropback_start.onclick = function () {
 
@@ -32,8 +38,6 @@ dropback_start.onclick = function () {
         secondsPass();
 
     }, 1000);
-
-    tryAgin();
 }
 
 
@@ -63,6 +67,10 @@ function flip(select) {
 
     let allflip = array_blocks.filter(flippedblock => flippedblock.classList.contains('is-flipped'));
 
+    function allMtchLen() {
+        return allMtch.length;
+    }
+
     if (allflip.length === 2) {
 
         stop_clicking();
@@ -86,9 +94,39 @@ function flip(select) {
         stop_clicking();
 
     }
-    console.log(...fl);
+
 }
 
+let checkForEndGame = setInterval(() => {
+    let allMtch = array_blocks.filter(flippedblock => flippedblock.classList.contains('has-match'));
+    
+    if (allMtch.length === array_blocks.length) {
+
+        won();
+    
+        clearInterval(checkForEndGame);
+    }
+
+}, 100);
+
+/*
+
+document.querySelectorAll('.game-block').forEach(function (ele) {ele.classList.add('has-match')}); 
+
+*/
+
+function won() {
+        
+    dropback.style.display = 'flex';
+    wonDiv.style.display = 'block';
+
+    deadTime.innerHTML = time_ele.innerHTML; 
+
+    answersTrue.innerHTML = true_element.innerHTML;
+
+    answersFalse.innerHTML = tries_element.innerHTML;
+
+}
 function stop_clicking() {
 
     blocks.classList.add('no-clicking');
@@ -151,7 +189,7 @@ function shuffle(array) {
 
 
 let time_ele = document.getElementById('time'),
-    seconds = 4;
+    seconds = 60;
 
 function secondsPass() {
     
@@ -175,6 +213,10 @@ function secondsPass() {
 
     } else {
 
+        dropback.style.display = 'flex';
+    
+        dropback_try.style.display = 'block';
+    
         clearInterval(contDown);
     }
 
@@ -184,17 +226,5 @@ function secondsPass() {
         location.reload();
 
     } 
-
-}
-
-function tryAgin() {
-
-    setTimeout(_ => {
-
-        dropback.style.display = 'flex';
-    
-        dropback_try.style.display = 'block';
-    
-    }, seconds * (1000 + 600));
 
 }
