@@ -150,7 +150,7 @@ secondsPass();
 
         secondsPass();
 
-    }, 1000);
+    }, 10000);
 
 function secondsPass() {
     
