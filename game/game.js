@@ -25,6 +25,15 @@ dropback_start.onclick = function () {
     dropback.style.display = 'none';
 
     this.remove();
+
+    
+    contDown = setInterval(() => {
+
+        secondsPass();
+
+    }, 1000);
+
+    tryAgin();
 }
 
 
@@ -142,15 +151,7 @@ function shuffle(array) {
 
 
 let time_ele = document.getElementById('time'),
-    seconds = 1000;
-
-secondsPass();
-
-    contDown = setInterval(() => {
-
-        secondsPass();
-
-    }, 1000);
+    seconds = 4;
 
 function secondsPass() {
     
@@ -177,12 +178,23 @@ function secondsPass() {
         clearInterval(contDown);
     }
 
-    if (rem == 00) {
+
+    dropback_try.onclick = _ => {
+
+        location.reload();
+
+    } 
+
+}
+
+function tryAgin() {
+
+    setTimeout(_ => {
 
         dropback.style.display = 'flex';
-
+    
         dropback_try.style.display = 'block';
-
-    }
+    
+    }, seconds * (1000 + 600));
 
 }
