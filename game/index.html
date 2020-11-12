@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>memory game</title>
+    <link rel="stylesheet" href="co.min.css">
+    <link rel="stylesheet" href="game.css">
+    <link rel="stylesheet" href="fontawesome-free-5.14.0-web/fontawesome-free-5.14.0-web/css/all.css">
+</head>
+<body>
+
+
+    <div class="dropback">
+        <div class="space-evenly">
+            <span class="start">start game</span>
+            <span class="try" style="display: none;">try agin</span>
+            <div id="won-div" class="bgc-blue p-20 text-center" style="font-size: 25px; display: none;">
+                <div>time : <span id="dead-time" class='color-light'></span></div>
+                <div class="mt-20">true <span id="answers-true" class='color-light'>0</span></div>
+                <div class="mt-20">wrong tries <span id="answers-false" class='color-light'>0</span></div>
+            </div>
+        </div>
+    </div>
+
+    <div class="info-container">
+        <div class="name">
+            Hello : <span id="name"></span>
+        </div>
+        <div class="time">
+            time : <span id="time"></span>
+        </div>
+        <div class="true">
+            true <span id="true">0</span>
+        </div>
+        <div class="tries">
+            wrong tries <span id="tries">0</span>
+        </div>
+    </div>
+    <div class="memory-game-blocks">
+        <!--react-->
+        <div class="game-block" style="font-size: 5em;" data-lang="react">
+            <div class="face front">
+                <i class="fas fa-question"></i>
+            </div>
+            <div class="face back">
+                <i class="fab fa-react"></i>
+            </div>
+        </div>
+        <!--node js-->
+        <div class="game-block" style="font-size: 5em;" data-lang="node-js">
+            <div class="face front">
+                <i class="fas fa-question"></i>
+            </div>
+            <div class="face back">
+                <i class="fab fa-node-js"></i>
+            </div>
+        </div>
+        <!--html-->
+        <div class="game-block" style="font-size: 5em;" data-lang="html5">
+            <div class="face front">
+                <i class="fas fa-question"></i>
+            </div>
+            <div class="face back">
+                <i class="fab fa-html5"></i>
+            </div>
+        </div>
+        <!--github-->
+        <div class="game-block" style="font-size: 5em;" data-lang="github">
+            <div class="face front">
+                <i class="fas fa-question"></i>
+            </div>
+            <div class="face back">
+                <i class="fab fa-github"></i>
+            </div>
+        </div>
+        <!--python-->
+        <div class="game-block" style="font-size: 5em;" data-lang="python">
+            <div class="face front">
+                <i class="fas fa-question"></i>
+            </div>
+            <div class="face back">
+                <i class="fab fa-python"></i>
+            </div>
+        </div>
+        <!--vue-->
+        <div class="game-block" style="font-size: 5em;" data-lang="vuejs">
+            <div class="face front">
+                <i class="fas fa-question"></i>
+            </div>
+            <div class="face back">
+                <i class="fab fa-vuejs"></i>
+            </div>
+        </div>
+        <!--angular-->
+        <div class="game-block" style="font-size: 5em;" data-lang="angular">
+            <div class="face front">
+                <i class="fas fa-question"></i>
+            </div>
+            <div class="face back">
+                <i class="fab fa-angular"></i>
+            </div>
+        </div>
+
+        <!--node js-->
+        <div class="game-block" style="font-size: 5em;" data-lang="node-js">
+            <div class="face front">
+                <i class="fas fa-question"></i>
+            </div>
+            <div class="face back">
+                <i class="fab fa-node-js"></i>
+            </div>
+        </div>
+        <!--js-->
+        <div class="game-block" style="font-size: 5em;" data-lang="js">
+            <div class="face front">
+                <i class="fas fa-question"></i>
+            </div>
+            <div class="face back">
+                <i class="fab fa-js"></i>
+            </div>
+        </div>
+        <!--html-->
+        <div class="game-block" style="font-size: 5em;" data-lang="html5">
+            <div class="face front">
+                <i class="fas fa-question"></i>
+            </div>
+            <div class="face back">
+                <i class="fab fa-html5"></i>
+            </div>
+        </div>
+        <!--vue-->
+        <div class="game-block" style="font-size: 5em;" data-lang="vuejs">
+            <div class="face front">
+                <i class="fas fa-question"></i>
+            </div>
+            <div class="face back">
+                <i class="fab fa-vuejs"></i>
+            </div>
+        </div>
+        <!--python-->
+        <div class="game-block" style="font-size: 5em;" data-lang="python">
+            <div class="face front">
+                <i class="fas fa-question"></i>
+            </div>
+            <div class="face back">
+                <i class="fab fa-python"></i>
+            </div>
+        </div>
+        <!--js-->
+        <div class="game-block" style="font-size: 5em;" data-lang="js">
+            <div class="face front">
+                <i class="fas fa-question"></i>
+            </div>
+            <div class="face back">
+                <i class="fab fa-js"></i>
+            </div>
+        </div>
+        <!--css-->
+        <div class="game-block" style="font-size: 5em;" data-lang="css3">
+            <div class="face front">
+                <i class="fas fa-question"></i>
+            </div>
+            <div class="face back">
+                <i class="fab fa-css3"></i>
+            </div>
+        </div>
+        <!--react-->
+        <div class="game-block" style="font-size: 5em;" data-lang="react">
+            <div class="face front">
+                <i class="fas fa-question"></i>
+            </div>
+            <div class="face back">
+                <i class="fab fa-react"></i>
+            </div>
+        </div>
+        <!--angular-->
+        <div class="game-block" style="font-size: 5em;" data-lang="angular">
+            <div class="face front">
+                <i class="fas fa-question"></i>
+            </div>
+            <div class="face back">
+                <i class="fab fa-angular"></i>
+            </div>
+        </div>
+        <!--github-->
+        <div class="game-block" style="font-size: 5em;" data-lang="github">
+            <div class="face front">
+                <i class="fas fa-question"></i>
+            </div>
+            <div class="face back">
+                <i class="fab fa-github"></i>
+            </div>
+        </div>
+        <!--css-->
+        <div class="game-block" style="font-size: 5em;" data-lang="css3">
+            <div class="face front">
+                <i class="fas fa-question"></i>
+            </div>
+            <div class="face back">
+                <i class="fab fa-css3"></i>
+            </div>
+        </div>
+    </div>
+
+    <audio id="success" src="success.mp3" preload="auto"></audio>
+    <audio id="fail" src="error.mp3" preload="auto"></audio>
+
+    <script src="game.js"></script>
+</body>
+</html>
