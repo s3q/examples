@@ -18,7 +18,7 @@ rippleButton.forEach(bn => {
 
         setTimeout(() => {
             rippleSpan.remove();
-        }, 1500);
+        }, 1000);
     });
 
 });
