@@ -31,7 +31,7 @@ body {
     transform: translate(-50%, -50%);
     border-radius: 50%;
     pointer-events: none;
-    animation: ripple-effect 1500ms 1;
+    animation: ripple-effect 1000ms 1;
 }
 
 @keyframes ripple-effect {
