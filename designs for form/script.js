@@ -26,6 +26,8 @@ submit.onclick = event => {
             ioU1.classList.remove('ani-u-top');
 
             cardInfo.classList.remove('card-false-info');
+            cardInfo.style.display = 'none';
+
             setTimeout(() => {
                 
                 checkIn.classList.add('check-true');
@@ -62,6 +64,8 @@ submit.onclick = event => {
             ioU1.classList.add('ani-u-bottom');
 
             cardInfo.classList.remove('card-true-info');
+            cardInfo.style.display = 'none';
+
             setTimeout(() => {
                 
                 checkIn.classList.add('check-false');
@@ -99,6 +103,8 @@ submit.onclick = event => {
         ioU1.classList.add('ani-u-bottom');
 
         cardInfo.classList.remove('card-true-info');
+        cardInfo.style.display = 'none';
+
         setTimeout(() => {
             
             checkIn.classList.add('check-false');
