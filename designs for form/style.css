@@ -1,0 +1,335 @@
+body {
+    margin: 0px;
+    padding: 0px;
+    display: flex;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #ececf5;
+    overflow: hidden;
+}
+
+
+body.dark {
+    background-color: #66666e !important;
+}
+
+.form-card {
+    position: relative;
+    padding: 70px 60px;
+    border-radius: 14px;
+    box-shadow: 0px 0px 15px 0px #d1d1d1;
+    background-color: #ececf5;
+    overflow: hidden;
+    z-index: 100000000000;
+    transform: scale(1);
+    transition: transform .4s ease-in-out;
+}
+
+.form-card.dark {
+    box-shadow: 0px 0px 15px 0px #414141 !important;
+    background-color: #66666e !important;
+}
+
+.form-card:hover {
+    transform: scale(1.1);
+}
+
+.custom-form {
+    z-index: 1;
+    display: flex;
+    flex-direction: column;
+    width: 325px;
+    font-size: 18px;
+}
+
+.custom-form > input, .custom-form > button{
+    margin: 23px 0px;
+    font-size: inherit;
+}
+
+.custom-input {
+    background-color: #ececf5;
+    border: none;
+    padding: 14px 12px;
+    border-radius: 14px;
+    box-shadow: inset 1.8px 1.8px 4px 1px #dadada, 
+                inset -1.8px -1.8px 4px 1px #ffffff;
+    color: #b0b0b0;
+}
+
+.custom-input.dark {
+    background-color: #66666e !important;
+    box-shadow: inset 1.8px 1.8px 4px 1px #414141, 
+                inset -1.8px -1.8px 4px 1px #848484 !important;
+}
+
+.custom-input::placeholder {
+    color: #b0b0b0;
+    font-size: inherit;
+}
+
+.custom-button {
+    background-color: #ffffff5e;
+    border: none;
+    padding: 14px 12px;
+    border-radius: 14px;
+    box-shadow: 1.8px 1.8px 4px 1px #dadada;
+    cursor: pointer;
+    color: #777777;
+}
+
+.custom-button.dark {
+    box-shadow: 1.8px 1.8px 4px 1px #414141 !important;
+}
+
+.custom-input:focus, .custom-button:focus {
+    outline: none;
+}
+
+.user-circle {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 60px;
+    padding: 18px;
+    background-color: #ffffffa1;
+    border-radius: 25px;
+    box-shadow: 1.8px 1.8px 4px 1px #dadada;
+    cursor: pointer;
+    color: #777777;
+}
+
+.user-circle.dark {
+    background-color: #ffffff5e !important;
+    box-shadow: 1.8px 1.8px 4px 1px #414141 !important;
+}
+
+.check-in {
+    position: absolute;
+    bottom: -48px;
+    right: -48px;
+    z-index: 500;
+    border-color: #f2f2f2 transparent transparent transparent;
+    border-style: solid;
+    border-width: 47px;
+    border-radius: 50%;
+    transform: rotate(-45deg);
+    box-shadow: 0px 0px 15px 0px #d1d1d1;
+}
+
+.check-in.dark {
+    border-color: #868686 transparent transparent transparent !important;
+    box-shadow: 0px 0px 15px 0px #414141 !important;   
+}
+
+.check-true::before {
+    font-family: "Font Awesome 5 Free";
+    font-weight: 900;
+    content: "\f058";
+    position: absolute;
+    top: -34px;
+    right: -7px;
+    transform: rotate(45deg);
+    color: #6292f8;
+}
+
+.check-false::before {
+    font-family: "Font Awesome 5 Free";
+    font-weight: 900;
+    content: "\f057";
+    position: absolute;
+    top: -34px;
+    right: -7px;
+    transform: rotate(45deg);
+    color: #f86262;
+}
+
+[class*="io-"] {
+    position: absolute;
+    background-color: #ddd7ec;
+}
+
+.io-s1 {
+    width: 34px;
+    height: 2px;
+    z-index: 100;
+    right: 22px;
+    top: 116px;
+}
+
+.io-s2 {
+    width: 34px;
+    height: 2px;
+    z-index: 100;
+    right: 22px;
+    top: 211px;
+}
+
+.io-s3 {
+    width: 2px;
+    height: 290px;
+    z-index: 100;
+    right: 20px;
+    top: 116px;
+}
+
+
+.io-u1 {
+    height: 669px;
+    width: 2px;
+    top: 104px;
+    z-index: 100;
+}
+
+.io-u1::before {
+    content: "";
+    right: -4px;
+    top: 0px;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    position: absolute;
+    background-color: #ddd7ec;
+}
+
+.ani-u-bottom::before {
+    animation: ani-u-bottom 1.6s ease-in-out both;
+}
+
+@keyframes ani-u-bottom {
+    0% {
+        right: -4px;
+        top: 0px;
+    }
+    
+    100% {
+        right: -4px;
+        top: 660px;
+    }
+}
+
+.ani-u-top::before {
+    animation: ani-u-top 1.6s ease-in-out both;
+}
+
+@keyframes ani-u-top {
+    0% {
+        right: -4px;
+        top: 660px;
+    }
+    
+    100% {
+        right: -4px;
+        top: 0px;
+    }
+}
+
+
+
+.io-s1::before {
+    content: "";
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    position: absolute;
+    background-color: #ddd7ec;
+    right: 24px;
+    top: -4px;
+}
+
+.io-s2::before {
+    content: "";
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    position: absolute;
+    background-color: #ddd7ec;
+    right: 24px;
+    top: -4px;
+}
+
+.ani-s::before {
+    animation: ani-s 1.6s ease-in-out both;
+}
+
+@keyframes ani-s {
+    0% {
+        right: 24px;
+        top: -4px;
+    }
+    50% {
+        right: -6px;
+        top: -4px;
+    }
+    
+    100% {
+        right: -6px;
+        top: 300px;
+    }
+}
+
+.mode {
+    position: absolute;
+    top: 15px;
+    left: 16px;
+    z-index: 500;
+    border-radius: 50%;
+    padding: 10px 11px;
+    cursor: pointer;
+    background-color: #ffffff5e;
+    box-shadow: 1.8px 1.8px 4px 1px #dadada;
+    transition: background-color .4s ease-in-out;
+}
+
+.mode:hover {
+    box-shadow: inset 1.8px 1.8px 4px 1px #dadada, inset -1.8px -1.8px 4px 1px #ffffff;
+    background-color: #ffffff00;
+}
+
+.mode.dark {
+    box-shadow: 1.8px 1.8px 4px 1px #414141 !important;
+}
+
+.mode.dark:hover {
+    box-shadow: inset 1.8px 1.8px 4px 1px #414141, inset -1.8px -1.8px 4px 1px #888888 !important;
+}
+
+
+.mode-dark::before {
+    font-family: "Font Awesome 5 Free";
+    font-weight: 900;
+    content: "\f186";
+    color: #777777;
+}
+.mode-light::before {
+    font-family: "Font Awesome 5 Free";
+    font-weight: 900;
+    content: "\f185";
+    color: #777777;
+}
+
+.card-info {
+    padding: 14px;
+    position: absolute;
+    bottom: 10px;
+    left: 10px;
+    z-index: 10000000000000000;
+    color: #fff;
+    font-size: 18px;
+    border-radius: 7px;
+    box-shadow: 1.8px 1.8px 4px 1px #dadada;
+}
+
+.card-info.dark {
+    box-shadow: 1.8px 1.8px 4px 1px #414141 !important;
+}
+
+.card-true-info {
+    background-color: #56b4ff;
+}
+
+.card-false-info {
+    background-color: #fc6565;
+}
