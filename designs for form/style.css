@@ -78,6 +78,12 @@ body.dark {
     box-shadow: 1.8px 1.8px 4px 1px #dadada;
     cursor: pointer;
     color: #777777;
+    transform: scale(1);
+    transition: transform .4s ease-in-out;
+}
+
+.custom-button:hover {
+    transform: scale(1.1);
 }
 
 .custom-button.dark {
