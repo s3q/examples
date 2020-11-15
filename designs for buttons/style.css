@@ -92,7 +92,7 @@ body {
     width: 37px;
     background-color: #ffffff61;
     transform: translate(-80px, -60px) rotate(45deg);
-    transition: transform .7s ease-in;
+    transition: transform .5s ease-in;
 }
 
 .new-button:hover::before {
