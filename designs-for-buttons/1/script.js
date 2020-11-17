@@ -10,7 +10,7 @@ rippleButton.forEach(bn => {
 
         const hrPos = eve.clientX - eve.target.offsetLeft; 
         const vrPos = eve.clientY - eve.target.offsetTop; 
-
+        
         rippleSpan.style.left = hrPos + 'px';
         rippleSpan.style.top = vrPos + 'px';
 

@@ -1,4 +1,6 @@
 window.addEventListener('load', function () {
+
+    /* slide imges 1 */
     (function () {
 
         const slider_basic = document.querySelectorAll('[data-slider]');
@@ -73,7 +75,7 @@ window.addEventListener('load', function () {
                         }) ;
         
         
-                        var pagination_bullets = Array.from(document.querySelectorAll('[pagination] li'));
+                        let pagination_bullets = Array.from(document.querySelectorAll('[pagination] li'));
         
                         if (pagination_bullets !== undefined) {
         
@@ -244,4 +246,5 @@ window.addEventListener('load', function () {
         });    
 
     })();
+
 });
