@@ -14,7 +14,48 @@ body {
     align-items: center;
     justify-content: center;
     flex-direction: column;
+    position: relative;
 }
+
+@media (max-width: 410px) {
+    .container {
+        width: 98% !important;
+    }
+    .card-body, .card-body .card-body-img {
+        width: 100% !important;
+        height: auto !important;
+    }
+    .footer {
+        width: 90% !important;
+    }
+}
+
+::-webkit-scrollbar {width: 15px;}
+
+::-webkit-scrollbar-track {background-color: #ffffff;}
+
+::-webkit-scrollbar-thumb {
+    background-color: #B3B3B3;
+    border-top: 4px solid #ffffff;
+    border-bottom: 4px solid #ffffff;
+    border-right: 2px solid #ffffff;
+    border-left: 2px solid #ffffff;
+    border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {background-color: #b0b0b0;}
+
+.pointer {cursor: pointer;}
+
+.like {color: tomato;}
+
+.bookmark {color: inherit;}
+
+.send {color: #8c0069;}
+
+.comment {color: inherit;}
+
+i {color: #4f4e55;transition: color .2s ease-in;}
 
 
 .card {
@@ -43,10 +84,7 @@ body {
     border-radius: 50%;
 }
 
-.card-header .card-info-username {
-    margin-left: 10px;
-}
-
+.card-header .card-info-username {margin-left: 10px;}
 
 .card-body {
     overflow: hidden;
@@ -61,6 +99,85 @@ body {
 }
 
 
+.card-comment {
+    background-color: #fbfbfb;
+    width: 93%;
+    height: 0px;
+    border-radius: 10px;
+    overflow-y: auto;
+    margin: 0px auto;
+    padding: 0px;
+    transition: height .4s ease-in-out, margin .2s ease-in-out, padding .2s ease-in-out;
+}
+
+.card-comment.open{
+    height: 200px;
+    margin: 20px auto;
+    padding: 8px;
+}
+
+
+.card-comment .group {
+    display: flex;
+    flex-wrap: nowrap;
+    margin: 10px;
+}
+
+.card-comment .group input {
+    padding: 10px;
+    color: #a9a9a9;
+    border: 1px solid #c6c6c6;
+    display: block;
+    background-color: transparent;
+    border-radius: 5px 0px 0px 5px;
+    width: 80%;
+}
+
+.card-comment .group button {
+    padding: 10px;
+    color: #a9a9a9;
+    border: 1px solid #c6c6c6;
+    display: block;
+    background-color: transparent;
+    border-radius: 0px 5px 5px 0px;
+    transition: background-color .4s ease-in, color .4s ease-in;
+    cursor: pointer;
+    width: 20%;
+}
+
+.card-comment .group button:hover {
+    color: #ffffff;
+    background-color: #a9a9a9;
+}
+
+.card-comment .group input:focus, .card-comment .group button:focus {outline: none;}
+
+.card-send {
+    background-color: #fcfcfc;
+    padding: 10px;
+    width: 100%;
+    position: absolute;
+    bottom: 0px;
+    height: 0px;
+    border-radius: 20px 20px 0px 0px;
+    box-shadow: 0px -3px 13px #0000002e;
+    transition: height .4s ease-in;
+}
+
+.card-send.open {
+    height: 300px;
+}
+
+.card-send::before {
+    content: "";
+    background-color: #ececec;
+    width: 62px;
+    height: 6px;
+    display: block;
+    margin: 4px auto;
+    border-radius: 10px;
+}
+
 .card-footer {
     display: flex;
     flex-wrap: nowrap;
@@ -68,11 +185,7 @@ body {
     padding: 2px;
 }
 
-.card-footer i {
-    margin: 0px 4px;
-}
-
-
+.card-footer i {margin: 0px 4px;}
 
 .footer {
     display: flex;
@@ -88,15 +201,20 @@ body {
     box-shadow: 0px 0px 10px #d6d6d6;
 }
 
-.footer img {
+.footer .img-file {
+    transform: scale(1);
+    transition: transform .8s cubic-bezier(0.4, 1.65, 0.07, 0.1);
+}
+
+.footer .img-file.scale {transform: scale(1.3);}
+
+.footer .img-file img {
     width: 24px;
     height: 24px;
     border-radius: 50%;
 }
 
-.io-footer-like {
-    position: relative;
-}
+.io-footer-like {position: relative;}
 
 .io-footer-like::after {
     content: "";
@@ -114,27 +232,20 @@ body {
     top: -13px;
     left: 295px;
     background-color: tomato;
-    color: white;
+    color: #ffffff;
     padding: 2px 5px;
     font-size: 12px;
     border-radius: 4px;
 }
 
+.notice-like > * {color: #ffffff;}
+
 .notice-like::before {
     content: "";
     position: absolute;
-    top: 19px;
+    top: 18px;
     left: 10px;
     border-width: 5px;
     border-color: tomato transparent transparent transparent;
     border-style: solid;
-}
-
-.pointer {
-    cursor: pointer;
-}
-
-
-.like {
-    color: tomato;
 }

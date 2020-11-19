@@ -8,9 +8,7 @@
     <link rel="stylesheet" href="fontawesome/fontawesome/css/all.min.css">
 </head>
 <body>
-    
     <div class="container">
-
         <div class="card">
             <div class="card-header">
                 <div class="card-info">
@@ -24,26 +22,26 @@
             </div>
             <div class="card-footer">
                 <i class="far fa-heart pointer io-button-like"></i>
-                <i class="far fa-comment pointer"></i>
-                <i class="far fa-paper-plane pointer"></i>
-
-                <div style="margin-left: auto;"> 
-                    <i class="far fa-bookmark pointer"></i>
+                <i class="far fa-comment pointer io-button-comment"></i>
+                <i class="far fa-paper-plane pointer io-button-send"></i>
+                <div style="margin-left: auto;"><i class="far fa-bookmark pointer io-button-bookmark"></i></div>
+            </div>
+            <div class="card-comment">
+                <div class="group">
+                    <input type="txet" name="text">
+                    <button><i class="far fa-paper-plane"></i></button>
                 </div>
             </div>
         </div>
-
-
+        <div class="card-send"></div>
         <div class="footer">
             <i class="fas fa-home pointer"></i>
             <i class="fas fa-search pointer"></i>
             <i class="far fa-plus-square pointer"></i>
             <i class="far fa-heart pointer footer-like io-footer-like"></i>
-            <i class="pointer"><img src="heade-img.jpg" alt="img"></i>
+            <i class="pointer img-file"><img src="heade-img.jpg" alt="img"></i>
         </div>
     </div>
-
-
     <script src="script.js"></script>
 </body>
 </html>
