@@ -15,27 +15,27 @@ body {
 
 .point {
     display: block;
-    width: 40px;
-    height: 40px;
+    width: 20px;
+    height: 20px;
     border-radius: 50%;
     background: linear-gradient(90deg,#ff8a00,#e52e71);
-    animation: point-ani 2.8s cubic-bezier(.23,.68,.43,.62) infinite both;
+    animation: point-ani 1.5s ease-in-out infinite both;
 }
 
 @keyframes point-ani {
     0%, 100% {
-        width: 40px;
-        margin-left: -180px;
+        width: 20px;
+        margin-left: -80px;
     }
 
     30%, 80% {
-        width: 60px;
+        width: 30px;
         margin-left: 0px;
     }
 
     50% {
-        width: 40px;
-        margin-left: 180px;
+        width: 20px;
+        margin-left: 80px;
     }
 
 }

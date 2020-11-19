@@ -1,0 +1,140 @@
+body {
+    margin: 0px;
+    padding: 0px;
+    height: 100vh;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 16px;
+    color: #4f4e55;
+}
+
+.container {
+    display: flex;
+    width: 410px;
+    margin: 100px auto;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+
+.card {
+    display: flex;
+    flex-direction: column;
+    border: 2px solid #f7f7f7;
+    padding: 13px;
+    border-radius: 10px;
+}
+
+.card-header {
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px;
+    padding: 2px;
+}
+
+.card-header .card-info {
+    display: flex;
+    align-items: center;
+}
+
+.card-header .card-info-img {
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+}
+
+.card-header .card-info-username {
+    margin-left: 10px;
+}
+
+
+.card-body {
+    overflow: hidden;
+    border-radius: 10px;
+    width: 400px;
+    height: 400px;
+}
+
+.card-body .card-body-img {
+    width: 400px;
+    height: 400px;
+}
+
+
+.card-footer {
+    display: flex;
+    flex-wrap: nowrap;
+    margin-top: 10px;
+    padding: 2px;
+}
+
+.card-footer i {
+    margin: 0px 4px;
+}
+
+
+
+.footer {
+    display: flex;
+    margin-top: 60px;
+    background-color: #fff;
+    padding: 12px;
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 20px;
+    position: relative;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px #d6d6d6;
+}
+
+.footer img {
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+}
+
+.io-footer-like {
+    position: relative;
+}
+
+.io-footer-like::after {
+    content: "";
+    padding: 2px;
+    background-color: tomato;
+    border-radius: 50%;
+    position: absolute;
+    top: 25px;
+    left: 50%;
+    transform: translate(-50%, 0px);
+}
+
+.notice-like {
+    position: absolute;
+    top: -13px;
+    left: 295px;
+    background-color: tomato;
+    color: white;
+    padding: 2px 5px;
+    font-size: 12px;
+    border-radius: 4px;
+}
+
+.notice-like::before {
+    content: "";
+    position: absolute;
+    top: 19px;
+    left: 10px;
+    border-width: 5px;
+    border-color: tomato transparent transparent transparent;
+    border-style: solid;
+}
+
+.pointer {
+    cursor: pointer;
+}
+
+
+.like {
+    color: tomato;
+}
