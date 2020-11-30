@@ -1,12 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="3c540b61-8a92-48a2-a303-66e4cf0bf34b" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/animation with css/2/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/animation with css/2/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/animation with css/2/script.js" beforeDir="false" afterPath="$PROJECT_DIR$/animation with css/2/script.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/animation with css/2/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/animation with css/2/style.css" afterDir="false" />
-    </list>
+    <list default="true" id="3c540b61-8a92-48a2-a303-66e4cf0bf34b" name="Default Changelist" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -24,7 +19,7 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="dart.analysis.tool.window.visible" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../New folder" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
@@ -43,6 +38,7 @@
       <option name="presentableId" value="Default" />
       <updated>1605752135083</updated>
       <workItem from="1605752138753" duration="16334000" />
+      <workItem from="1605939046141" duration="386000" />
     </task>
     <servers />
   </component>
@@ -50,6 +46,10 @@
     <option name="version" value="3" />
   </component>
   <component name="WindowStateProjectService">
+    <state x="500" y="185" key="FileChooserDialogImpl" timestamp="1605939439095">
+      <screen x="0" y="0" width="1440" height="860" />
+    </state>
+    <state x="500" y="185" key="FileChooserDialogImpl/0.0.1440.860@0.0.1440.860" timestamp="1605939439095" />
     <state x="376" y="195" key="run.anything.popup" timestamp="1605761443275">
       <screen x="0" y="0" width="1440" height="860" />
     </state>
