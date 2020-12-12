@@ -1,0 +1,44 @@
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@600&display=swap');
+body {
+    margin: 0px;
+    padding: 0px;
+    height: 100vh;
+    font-family: 'Dancing Script', cursive;
+}
+
+.container {
+    display: flex;
+    width: 600px;
+    margin: 100px auto;
+    align-items: center;
+    justify-content: center;
+}
+
+.clock {
+    width: 150px;
+    line-height: 40px;
+    font-size: 20px;
+    text-align: center;
+}
+
+.clock.ndang {
+    border: 2px solid #d8d8d8;
+    color: #939393;
+}
+.clock.dang {
+    border: 2px solid #ffcbcb;
+    color: #ff9191;
+}
+
+.clock.pop {
+    animation: aniclock 1s cubic-bezier(0.175, 0.885, 0.32, 1.275) infinite both;
+}
+
+@keyframes aniclock {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.1);
+    }
+}
