@@ -1,7 +1,7 @@
 let clock = document.querySelector('.clock');
 
 // second :
-let second = 86800;
+let second = 21600;
 
 let hor = 0, min = 0, sec = 0;
 
