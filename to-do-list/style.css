@@ -118,7 +118,6 @@ body {
     margin: 30px auto;
     box-shadow: 0px 0px 10px #c0c0c0;
     border-radius: 10px;
-    overflow: hidden;
 }
 
 .tasks-box .task-box .task-info {
@@ -132,14 +131,6 @@ body {
 .tasks-box .task-box .task-info.line-through {
     text-decoration: line-through;
 }
-
-.tasks-box .task-box .task-info::before {
-    content: "";
-    border-width: 10px;
-    border-style: solid;
-    border-color: #a7b4ff transparent transparent transparent;
-}
-
 
 .tasks-box .task-box .delete-task {
     display: block;
