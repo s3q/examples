@@ -91,6 +91,7 @@ body {
     color: #3F51B5;
     font-size: 15px;
     cursor: pointer;
+    user-select: none;
     transition: transform .2s ease-in;
     box-shadow: 0px 0px 20px #673AB7;
 }
