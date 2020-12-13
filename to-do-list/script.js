@@ -1,7 +1,7 @@
-let inputUser = document.querySelector('.box-input-user .input-user');
-let addUser = document.querySelector('.box-input-user .add-user');
+let inputtask = document.querySelector('.box-input-task .input-task');
+let addtask = document.querySelector('.box-input-task .add-task');
 
-let usersBox = document.querySelector('.users-box');
+let tasksBox = document.querySelector('.tasks-box');
 
 
 window.addEventListener('load', _ => {
@@ -16,13 +16,13 @@ window.addEventListener('load', _ => {
 let tasksCount = document.querySelector('.box-tasks-status .tasks-count .count');
 let completeddCount = document.querySelector('.box-tasks-status .completed-count .count');
 
-addUser.addEventListener('click', _ => {
+addtask.addEventListener('click', _ => {
 
-    let inputUserVal = inputUser.value;
+    let inputtaskVal = inputtask.value;
  
-    if (inputUserVal !== '') {
+    if (inputtaskVal !== '') {
 
-        usersBox.appendChild(createUser(inputUserVal));
+        tasksBox.appendChild(createtask(inputtaskVal));
 
         tasksAcompletedCount();
 
@@ -30,37 +30,37 @@ addUser.addEventListener('click', _ => {
 
     }
 
-    inputUser.value = '';
+    inputtask.value = '';
     inputFocus();
     
     makeLineThrough();
 });
 
 function inputFocus() {
-    inputUser.focus();
+    inputtask.focus();
 }
 
-function createUser(username) {
-    let userBox = document.createElement('div');
-    userBox.classList.add('user-box');
+function createtask(data) {
+    let taskBox = document.createElement('div');
+    taskBox.classList.add('task-box');
 
-    let userInfo = document.createElement('span');
-    let deleteUser = document.createElement('span');
+    let taskInfo = document.createElement('span');
+    let deletetask = document.createElement('span');
 
-    userInfo.classList.add('user-info');
-    userInfo.textContent = username;
+    taskInfo.classList.add('task-info');
+    taskInfo.textContent = data;
 
-    deleteUser.classList.add('delete-user');
-    deleteUser.textContent = 'delete';
+    deletetask.classList.add('delete-task');
+    deletetask.textContent = 'delete';
 
-    userBox.appendChild(userInfo);
-    userBox.appendChild(deleteUser);
+    taskBox.appendChild(taskInfo);
+    taskBox.appendChild(deletetask);
     
-    deleteUser.addEventListener('click', _ => {
+    deletetask.addEventListener('click', _ => {
 
-        if (deleteUser.parentElement == userInfo.parentElement) {
+        if (deletetask.parentElement == taskInfo.parentElement) {
 
-            deleteUser.parentElement.remove();
+            deletetask.parentElement.remove();
 
             tasksAcompletedCount();
 
@@ -73,7 +73,7 @@ function createUser(username) {
 
     });
 
-    return userBox;
+    return taskBox;
 }
 
 
@@ -83,9 +83,9 @@ function tasksStatus() {
     createTasksStatusElement.textContent = 'There are no tasks ..';
     createTasksStatusElement.classList.add('tasks-status');
 
-    if (usersBox.childElementCount == 0) {
+    if (tasksBox.childElementCount == 0) {
 
-        usersBox.appendChild(createTasksStatusElement);
+        tasksBox.appendChild(createTasksStatusElement);
 
         console.log('craete');
 
@@ -105,7 +105,7 @@ function tasksStatus() {
 
 function makeLineThrough() {
 
-    let lineThrough = document.querySelectorAll('.users-box .user-box .user-info');
+    let lineThrough = document.querySelectorAll('.tasks-box .task-box .task-info');
 
     lineThrough.forEach(element => {
 
@@ -124,19 +124,19 @@ function makeLineThrough() {
 
 function tasksAcompletedCount() {
 
-    let arrUsersBox = Array.from(usersBox.children);
+    let arrtasksBox = Array.from(tasksBox.children);
 
 
-    let arrUsersBoxTasks = arrUsersBox;
-    arrUsersBoxTasks = arrUsersBoxTasks.filter(u => u != tasksStatus());
+    let arrtasksBoxTasks = arrtasksBox;
+    arrtasksBoxTasks = arrtasksBoxTasks.filter(u => u != tasksStatus());
 
-    tasksCount.textContent = arrUsersBoxTasks.length;
+    tasksCount.textContent = arrtasksBoxTasks.length;
 
 
 
-    let arrUsersBoxCompleted = Array.from(makeLineThrough());
+    let arrtasksBoxCompleted = Array.from(makeLineThrough());
 
-    arrUsersBoxCompleted = arrUsersBoxCompleted.filter(u => u.classList.contains('line-through'));
+    arrtasksBoxCompleted = arrtasksBoxCompleted.filter(u => u.classList.contains('line-through'));
 
-    completeddCount.textContent = arrUsersBoxCompleted.length;
+    completeddCount.textContent = arrtasksBoxCompleted.length;
 }

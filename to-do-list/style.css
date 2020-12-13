@@ -43,7 +43,7 @@ body {
 
 
 
-.box-input-user {
+.box-input-task {
     position: relative;
     padding: 30px 0px;
     background-color: #9a61ff;
@@ -51,7 +51,7 @@ body {
     border: 5px solid #EEE;
 }
 
-.box-input-user .input-user {
+.box-input-task .input-task {
     width: 60%;
     padding: 12px;
     border: none;
@@ -64,20 +64,20 @@ body {
     transition: box-shadow .2s ease-in, transform .2s ease-in;
 }
 
-.box-input-user .input-user:hover, .box-input-user .input-user:focus {
+.box-input-task .input-task:hover, .box-input-task .input-task:focus {
     box-shadow: 0px 0px 20px #673AB7;
 }
 
-.box-input-user .input-user:focus {
+.box-input-task .input-task:focus {
     transform: scaleX(1.2);
 }
 
-.box-input-user .input-user:focus, .box-input-user .add-user:focus {
+.box-input-task .input-task:focus, .box-input-task .add-task:focus {
     outline: none;
     border: none;
 }
 
-.box-input-user .add-user {
+.box-input-task .add-task {
     position: absolute;
     left: 360px;
     top: 50%;
@@ -95,11 +95,11 @@ body {
     box-shadow: 0px 0px 20px #673AB7;
 }
 
-.box-input-user .add-user:hover {
+.box-input-task .add-task:hover {
     transform: translateY(-50%) rotate(180deg);
 }
 
-.users-box {
+.tasks-box {
     width: 100%;
     background-color: #eee;
     height: 300px;
@@ -108,7 +108,7 @@ body {
     text-align: center;
 }
 
-.users-box .user-box {
+.tasks-box .task-box {
     display: flex;
     width: 80%;
     height: 46px;
@@ -120,16 +120,19 @@ body {
     overflow: hidden;
 }
 
-.users-box .user-box .user-info {
+.tasks-box .task-box .task-info {
+    width: 80%;
     cursor: default;
     user-select: none;
+    overflow: hidden;
+    text-align: left;
 }
 
-.users-box .user-box .user-info.line-through {
+.tasks-box .task-box .task-info.line-through {
     text-decoration: line-through;
 }
 
-.users-box .user-box .user-info::before {
+.tasks-box .task-box .task-info::before {
     content: "";
     border-width: 10px;
     border-style: solid;
@@ -137,8 +140,9 @@ body {
 }
 
 
-.users-box .user-box .delete-user {
+.tasks-box .task-box .delete-task {
     display: block;
+    width: 18%;
     margin-left: auto;
     background-color: #E91E63;
     padding: 3px 10px;
