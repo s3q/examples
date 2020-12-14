@@ -1,46 +1,58 @@
-let inputtask = document.querySelector('.box-input-task .input-task');
-let addtask = document.querySelector('.box-input-task .add-task');
+let inputTask = document.querySelector('.box-input-task .input-task');
+let addTask = document.querySelector('.box-input-task .add-task');
 
 let tasksBox = document.querySelector('.tasks-box');
 
+let dataIndex = 0;
 
 window.addEventListener('load', _ => {
+
     inputFocus();
+
+    deleteTask();
 
     tasksAcompletedCount();
 
     tasksStatus();
+
 });
 
 
 let tasksCount = document.querySelector('.box-tasks-status .tasks-count .count');
 let completeddCount = document.querySelector('.box-tasks-status .completed-count .count');
 
-addtask.addEventListener('click', _ => {
 
-    let inputtaskVal = inputtask.value;
+addTask.addEventListener('click', _ => {
+
+    let inputTaskVal = inputTask.value;
  
-    if (inputtaskVal !== '') {
+    if (inputTaskVal !== '') {
 
-        tasksBox.appendChild(createtask(inputtaskVal));
+        tasksBox.appendChild(createtask(inputTaskVal));
+
+        deleteTask();
 
         tasksAcompletedCount();
-
+        
         tasksStatus();
 
     }
 
-    inputtask.value = '';
+    inputTask.value = '';
     inputFocus();
     
     makeLineThrough();
+
 });
 
 function inputFocus() {
-    inputtask.focus();
+
+    inputTask.focus();
+
 }
 
 function createtask(data) {
+
     let taskBox = document.createElement('div');
     taskBox.classList.add('task-box');
 
@@ -55,29 +67,16 @@ function createtask(data) {
 
     taskBox.appendChild(taskInfo);
     taskBox.appendChild(deletetask);
+
+    taskBox.setAttribute('data-index', dataIndex++);
     
-    deletetask.addEventListener('click', _ => {
-
-        if (deletetask.parentElement == taskInfo.parentElement) {
-
-            deletetask.parentElement.remove();
-
-            tasksAcompletedCount();
-
-            tasksStatus();
-
-            makeLineThrough();
-
-        }
-
-
-    });
-
     return taskBox;
+
 }
 
 
 function tasksStatus() {
+
     let createTasksStatusElement = document.createElement('span');
 
     createTasksStatusElement.textContent = 'There are no tasks ..';
@@ -86,8 +85,6 @@ function tasksStatus() {
     if (tasksBox.childElementCount == 0) {
 
         tasksBox.appendChild(createTasksStatusElement);
-
-        console.log('craete');
 
     } else {
 
@@ -100,7 +97,9 @@ function tasksStatus() {
         }
 
         return tasksStatusElement;
+
     }
+
 }
 
 function makeLineThrough() {
@@ -114,11 +113,17 @@ function makeLineThrough() {
             element.classList.toggle('line-through');
 
             tasksAcompletedCount();
+
+            element.parentElement.setAttribute('data-task-status', 'line-through');
+
+            let arrLineThroughElement = Array.from(tasksBox.children).filter(u => u.getAttribute('data-task-status'));
+            
         }
 
     });
 
     return lineThrough;
+
 }
 
 
@@ -139,4 +144,29 @@ function tasksAcompletedCount() {
     arrtasksBoxCompleted = arrtasksBoxCompleted.filter(u => u.classList.contains('line-through'));
 
     completeddCount.textContent = arrtasksBoxCompleted.length;
+
+}
+
+
+
+function deleteTask() {
+    
+    let deleteTaskElement = document.querySelectorAll('.tasks-box .task-box .delete-task');
+
+    deleteTaskElement.forEach(element => {
+
+        element.addEventListener('click', _ => {
+
+                element.parentElement.remove();
+    
+                tasksAcompletedCount();
+    
+                tasksStatus();
+    
+                makeLineThrough();
+    
+        });
+
+    });
+
 }
