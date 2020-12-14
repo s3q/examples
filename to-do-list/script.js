@@ -2,10 +2,17 @@ let inputTask = document.querySelector('.box-input-task .input-task');
 let addTask = document.querySelector('.box-input-task .add-task');
 
 let tasksBox = document.querySelector('.tasks-box');
+let localStorageTasksBox = tasksBox.innerHTML;
 
 let dataIndex = 0;
 
 window.addEventListener('load', _ => {
+
+    if (localStorage.length != 0) {
+
+        tasksBox.innerHTML = localStorage.getItem('tasksBox');
+
+    }
 
     inputFocus();
 
@@ -17,6 +24,13 @@ window.addEventListener('load', _ => {
 
 });
 
+function localStorageBox() {
+
+    localStorageTasksBox = tasksBox.innerHTML;
+
+    localStorage.setItem('tasksBox', localStorageTasksBox);
+
+}
 
 let tasksCount = document.querySelector('.box-tasks-status .tasks-count .count');
 let completeddCount = document.querySelector('.box-tasks-status .completed-count .count');
@@ -29,6 +43,8 @@ addTask.addEventListener('click', _ => {
     if (inputTaskVal !== '') {
 
         tasksBox.appendChild(createtask(inputTaskVal));
+
+        localStorageBox();
 
         deleteTask();
 
@@ -112,12 +128,10 @@ function makeLineThrough() {
 
             element.classList.toggle('line-through');
 
+            localStorageBox();
+
             tasksAcompletedCount();
 
-            element.parentElement.setAttribute('data-task-status', 'line-through');
-
-            let arrLineThroughElement = Array.from(tasksBox.children).filter(u => u.getAttribute('data-task-status'));
-            
         }
 
     });
@@ -159,6 +173,8 @@ function deleteTask() {
 
                 element.parentElement.remove();
     
+                localStorageBox();
+
                 tasksAcompletedCount();
     
                 tasksStatus();
